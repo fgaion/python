@@ -56,10 +56,20 @@ print(f"Removido {x} - idades: {idades}")
 print('Percorrendo um dicionário:')
 for x in idades3:
     print(f"{x} tem {idades3[x]} anos",end='; ')
+
 print('\nOutra maneira de fazer o mesmo:')
 for x,y in idades3.items():
     print(f"{x} tem {y} anos",end='; ')
 
+print('\nOutra maneira de fazer o mesmo (modo pythonico):')
+for x in idades3.keys():
+    print(f"{x} tem {idades3[x]} anos",end='; ')
+
 print('\nQuadrados de 0 a 10:')
-quadrado = dict(list((x, x*x) for x in range(11)))
+quadrado = dict(list((x, x*x) for x in range(10)))
 print(f"quadrados: {quadrado}")
+
+print(f'Tamanho de quadrado: {len(quadrado)} ')
+print(f"Quadrados - Soma valor keys: {sum(quadrado.keys())} - Soma valor Values: {sum(quadrado.values())}")
+print(f"Quadrados - Valor Max keys: {max(quadrado.keys())} - Valor Max Values: {max(quadrado.values())}")
+print(f"Quadrados - Valor Min keys: {min(quadrado.keys())} - Valor Min Values: {min(quadrado.values())}")
